@@ -251,6 +251,21 @@ _FL_DEFPIN(20, 4, D); _FL_DEFPIN(21, 5, D);
 //#define SPI_UART0_DATA 1
 //#define SPI_UART0_CLOCK 4
 
+#elif defined(__AVR_ATtiny88__)
+
+#define MAX_PIN 19
+_FL_DEFPIN( 0, 0, D); _FL_DEFPIN( 1, 1, D); _FL_DEFPIN( 2, 2, D); _FL_DEFPIN( 3, 3, D);
+_FL_DEFPIN( 4, 4, D); _FL_DEFPIN( 5, 5, D); _FL_DEFPIN( 6, 6, D); _FL_DEFPIN( 7, 7, D);
+_FL_DEFPIN( 8, 0, B); _FL_DEFPIN( 9, 1, B); _FL_DEFPIN(10, 2, B); _FL_DEFPIN(11, 3, B);
+_FL_DEFPIN(12, 4, B); _FL_DEFPIN(13, 5, B); _FL_DEFPIN(14, 6, B); _FL_DEFPIN(15, 7, B);
+_FL_DEFPIN(16, 7, C); _FL_DEFPIN(17, 0, C); _FL_DEFPIN(18, 1, C); _FL_DEFPIN(19, 2, C);
+
+#define SPI_DATA 11
+#define SPI_CLOCK 13
+#define SPI_SELECT 10
+#define AVR_HARDWARE_SPI 1
+#define HAS_HARDWARE_PIN_SUPPORT 1
+
 #elif defined(__AVR_ATmega328P__) || defined(__AVR_ATmega328PB__) || defined(__AVR_ATmega328__) || defined(__AVR_ATmega168__) || defined(__AVR_ATmega168P__) || defined(__AVR_ATmega8__)
 
 #define MAX_PIN 19
